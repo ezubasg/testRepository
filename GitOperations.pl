@@ -49,13 +49,14 @@ printOutput("Executed  Git Add: $gitAddResult \n");
 my $gitCommitResult = `git commit -m "sfsdfds"`;
 printOutput("Executed Git Commit: \n");
 
+my $gitRemoveResult = `git remote remove origin $ARGV[2]`;
 
 my $gitAddOriginResult = `git remote add origin $ARGV[2]`; 
 printOutput("Executed Git Origin Addition \n");
 
 
 my $gitPushResult = `git push -u origin master`;
-printOutput("Executed Git Push To Origin ");
+printOutput("Executed Git Push To Origin $gitPushResult");
 
 
 
