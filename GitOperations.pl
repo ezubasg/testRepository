@@ -44,10 +44,20 @@ my $gitInitResult = `git init  $ARGV[0]`;
 printOutput("Executing Git Init: $gitInitResult  \n");
 
 my $gitAddResult = `git add .`;
-printOutput("Executing Git Add: $gitAddResult \n");
+printOutput("Executed  Git Add: $gitAddResult \n");
 
 my $gitCommitResult = `git commit -m "sfsdfds"`;
-printOutput("Executing Git Commit: \n");
+printOutput("Executed Git Commit: \n");
+
+
+my $gitAddOriginResult = `git remote add origin $ARGV[2]`; 
+printOutput("Executed Git Origin Addition \n");
+
+
+my $gitPushResult = `git push -u origin master`;
+printOutput("Executed Git Push To Origin ");
+
+
 
 
 print "\n\n\n\t\t##################### END  ################################\n"; 
